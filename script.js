@@ -31,9 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!data) {
             heroTitle.textContent = 'Error loading data';
             heroDesc.textContent = 'Please check your connection or contact support.';
-            updatesContainer.innerHTML = '<div class="card"><p>Failed to load updates.</p></div>';
+            updatesContainer.innerHTML = '<div><p>Failed to load updates.</p></div>';
             socialContainer.innerHTML = '<p>Failed to load social links.</p>';
-            downloadsContainer.innerHTML = '<div class="card"><p>Failed to load downloads.</p></div>';
+            downloadsContainer.innerHTML = '<div><p>Failed to load downloads.</p></div>';
             return;
         }
 
@@ -52,13 +52,13 @@ document.addEventListener('DOMContentLoaded', () => {
         updatesTitle.textContent = translations[lang]?.updates_title || 'Latest Updates';
         updatesContainer.innerHTML = updates.length > 0
             ? updates.map(update => `
-                <div class="card">
+                <div>
                     <h3 class="text-xl font-bold">${update.title[lang] || 'Update Title'}</h3>
                     <p>${update.description[lang] || 'Update description'}</p>
                     <p class="text-sm text-gray-400">${update.date || 'N/A'}</p>
                 </div>
             `).join('')
-            : '<div class="card"><p>No updates available.</p></div>';
+            : '<div><p>No updates available.</p></div>';
 
         // Social
         socialTitle.textContent = translations[lang]?.social_title || 'Follow Us';
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         downloadsContainer.innerHTML = downloads.length > 0
             ? downloads.map(download => {
                 let content = `
-                    <div class="card">
+                    <div>
                         <h3 class="text-xl font-bold">${download.platform}</h3>
                         <p>${download.description[lang] || 'Download description'}</p>
                         <a href="${download.url || '#'}"
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 `;
                 if (download.discontinued) {
                     content = `
-                        <div class="card">
+                        <div>
                             <div class="discontinued-notice">${translations[lang]?.discontinued_notice || 'Discontinued'}</div>
                             ${content.slice(25)}
                         </div>
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 return content;
             }).join('')
-            : '<div class="card"><p>No downloads available.</p></div>';
+            : '<div><p>No downloads available.</p></div>';
 
         // Footer
         footerText.textContent = translations[lang]?.footer_text || '© 2025 PvZ Fusion Edition. All rights reserved.';
