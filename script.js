@@ -18,7 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error('Failed to load data.json:', response.status);
                 return null;
             }
-            return await response.json();
+            const data = await response.json();
+            console.log('Data loaded successfully:', data);
+            return data;
         } catch (error) {
             console.error('Fetch error:', error);
             return null;
@@ -35,31 +37,31 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        const translations = data.translations;
+        const translations = data.translations || {};
         const updates = data.updates || [];
         const social = data.social || [];
         const downloads = data.downloads || [];
 
         // Hero Section
-        heroTitle.textContent = translations[lang].hero_title;
-        heroDesc.textContent = translations[lang].hero_desc;
+        heroTitle.textContent = translations[lang]?.hero_title || 'Welcome';
+        heroDesc.textContent = translations[lang]?.hero_desc || 'A fan-made game!';
         const windowsDownload = downloads.find(d => d.platform === 'Windows' && !d.discontinued);
         downloadBtn.href = windowsDownload ? windowsDownload.url : '#';
 
         // Updates
-        updatesTitle.textContent = translations[lang].updates_title;
+        updatesTitle.textContent = translations[lang]?.updates_title || 'Latest Updates';
         updatesContainer.innerHTML = updates.length > 0
             ? updates.map(update => `
                 <div class="card">
-                    <h3 class="text-xl font-bold">${update.title[lang]}</h3>
-                    <p>${update.description[lang]}</p>
-                    <p class="text-sm text-gray-400">${update.date}</p>
+                    <h3 class="text-xl font-bold">${update.title[lang] || 'Update Title'}</h3>
+                    <p>${update.description[lang] || 'Update description'}</p>
+                    <p class="text-sm text-gray-400">${update.date || 'N/A'}</p>
                 </div>
             `).join('')
             : '<div class="card"><p>No updates available.</p></div>';
 
         // Social
-        socialTitle.textContent = translations[lang].social_title;
+        socialTitle.textContent = translations[lang]?.social_title || 'Follow Us';
         socialContainer.innerHTML = social.length > 0
             ? social.map(link => `
                 <a href="${link.url}" target="_blank" class="social-icon">
@@ -69,20 +71,23 @@ document.addEventListener('DOMContentLoaded', () => {
             : '<p>No social links available.</p>';
 
         // Downloads
-        downloadTitle.textContent = translations[lang].download_title;
+        downloadTitle.textContent = translations[lang]?.download_title || 'Download';
         downloadsContainer.innerHTML = downloads.length > 0
             ? downloads.map(download => {
                 let content = `
                     <div class="card">
                         <h3 class="text-xl font-bold">${download.platform}</h3>
-                        <p>${download.description[lang]}</p>
-                        <a href="${download.url}" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4 inline-block">${translations[lang].download_btn}</a>
+                        <p>${download.description[lang] || 'Download description'}</p>
+                        <a href="${download.url || '#'}"
+                           class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4 inline-block">
+                            ${translations[lang]?.download_btn || 'Download'}
+                        </a>
                     </div>
                 `;
                 if (download.discontinued) {
                     content = `
                         <div class="card">
-                            <div class="discontinued-notice">${translations[lang].discontinued_notice}</div>
+                            <div class="discontinued-notice">${translations[lang]?.discontinued_notice || 'Discontinued'}</div>
                             ${content.slice(25)}
                         </div>
                     `;
@@ -92,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
             : '<div class="card"><p>No downloads available.</p></div>';
 
         // Footer
-        footerText.textContent = translations[lang].footer_text;
+        footerText.textContent = translations[lang]?.footer_text || '© 2025 PvZ Fusion Edition. All rights reserved.';
     }
 
     loadData().then(data => {
