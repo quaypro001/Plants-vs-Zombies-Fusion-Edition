@@ -82,7 +82,7 @@
                 "vi": "Tải phiên bản mới nhất cho PC Windows.",
                 "zh": "下载Windows PC最新版本。"
             },
-            "url": "https://drive.google.com/uc?export=download&id=YOUR_WINDOWS_FILE_ID",
+            "url": "https://drive.google.com/uc?export=download&id=1iwkdLpwgxjbCNq85EFB-GrtEtDZUi9tv",
             "discontinued": false
         },
         {
@@ -92,18 +92,18 @@
                 "vi": "Tải xuống cho thiết bị Android (đã ngừng hỗ trợ).",
                 "zh": "下载Android设备版（已停止支持）。"
             },
-            "url": "https://drive.google.com/uc?export=download&id=YOUR_ANDROID_FILE_ID",
+            "url": "https://drive.google.com/uc?export=download&id=1eLhg73cjG2iu5pJTLLUEihqTS9Ueecoa",
             "discontinued": true
         },
         {
             "platform": "iOS",
             "description": {
-                "en": "Download for iOS devices (discontinued).",
-                "vi": "Tải xuống cho thiết bị iOS (đã ngừng hỗ trợ).",
-                "zh": "下载iOS设备版（已停止支持）。"
+                "en": "Download for iOS devices (not supported).",
+                "vi": "Tải xuống cho thiết bị iOS (không hỗ trợ).",
+                "zh": "下载iOS设备版（不支援）。"
             },
             "url": "https://drive.google.com/uc?export=download&id=YOUR_IOS_FILE_ID",
-            "discontinued": true
+            "discontinued": false
         }
     ],
     "old_versions": [
