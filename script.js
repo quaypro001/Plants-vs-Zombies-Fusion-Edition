@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         socialContainer.innerHTML = social.length > 0
             ? social.map(link => `
                 <a href="${link.url}" target="_blank" class="social-icon">
-                    <img src="/${link.icon}" alt="${link.name}" class="w-10 h-10">
+                    <img src="./${link.icon}" alt="${link.name}" class="w-10 h-10">
                 </a>
             `).join('')
             : '<p>No social links available.</p>';
