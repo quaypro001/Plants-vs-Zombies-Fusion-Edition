@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plants vs Zombies Fusion Edition</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body class="bg-gray-900 text-white font-roboto">
@@ -13,8 +13,8 @@
         <h1 class="text-2xl font-bold">Plants vs Zombies Fusion Edition</h1>
         <select id="language-select" class="p-2 bg-gray-800 rounded text-white">
             <option value="en">English</option>
-            <option value="vi">Tiếng Việt</option>
-            <option value="zh">中文</option>
+            <option value="vi">Vietnamese</option>
+            <option value="zh">China</option>
         </select>
     </header>
 
@@ -29,7 +29,7 @@
     <section class="container mx-auto p-6">
         <h2 id="updates-title" class="text-3xl font-bold mb-4 text-center">Latest Updates</h2>
         <div id="updates" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <p>Loading updates...</p>
+            <div class="card"><p>Loading updates...</p></div>
         </div>
     </section>
 
@@ -43,7 +43,14 @@
     <section class="container mx-auto p-6">
         <h2 id="download-title" class="text-3xl font-bold mb-4 text-center">Download</h2>
         <div id="downloads" class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <p>Loading downloads...</p>
+            <div class="card"><p>Loading downloads...</p></div>
+        </div>
+    </section>
+
+    <section class="container mx-auto p-6">
+        <h2 id="old-versions-title" class="text-3xl font-bold mb-4 text-center">Old Versions</h2>
+        <div id="old-versions" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="card"><p>Loading old versions...</p></div>
         </div>
     </section>
 
@@ -51,6 +58,6 @@
         <p id="footer-text">© 2025 PvZ Fusion Edition. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
 </body>
 </html>
