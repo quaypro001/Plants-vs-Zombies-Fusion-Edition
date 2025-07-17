@@ -1,0 +1,106 @@
+{
+    "translations": {
+        "en": {
+            "hero_title": "Welcome to PvZ Fusion Edition",
+            "hero_desc": "A fan-made game with unique plant fusion system!",
+            "download_btn": "Download Now",
+            "updates_title": "Latest Updates",
+            "social_title": "Follow Us",
+            "download_title": "Download",
+            "footer_text": "© 2025 PvZ Fusion Edition. All rights reserved.",
+            "discontinued_notice": "This mobile version is no longer supported. Download at your own risk."
+        },
+        "vi": {
+            "hero_title": "Chào mừng đến với PvZ Fusion Edition",
+            "hero_desc": "Game do fan tạo với hệ thống kết hợp cây độc đáo!",
+            "download_btn": "Tải xuống ngay",
+            "updates_title": "Cập nhật mới nhất",
+            "social_title": "Theo dõi chúng tôi",
+            "download_title": "Tải xuống",
+            "footer_text": "© 2025 PvZ Fusion Edition. Mọi quyền được bảo lưu.",
+            "discontinued_notice": "Phiên bản di động này không còn được hỗ trợ. Tải xuống có thể gặp rủi ro."
+        },
+        "zh": {
+            "hero_title": "欢迎体验PvZ融合版",
+            "hero_desc": "粉丝自制的游戏，拥有独特的植物融合系统！",
+            "download_btn": "立即下载",
+            "updates_title": "最新更新",
+            "social_title": "关注我们",
+            "download_title": "下载",
+            "footer_text": "© 2025 PvZ融合版。保留所有权利。",
+            "discontinued_notice": "此移动版本已不再支持。下载需自行承担风险。"
+        }
+    },
+    "updates": [
+        {
+            "title": {
+                "en": "Version 2.1.6 Released",
+                "vi": "Phát hành phiên bản 2.1.6",
+                "zh": "版本2.1.6发布"
+            },
+            "description": {
+                "en": "Added new fusion plants and enhanced graphics.",
+                "vi": "Thêm cây kết hợp mới và nâng cấp đồ họa.",
+                "zh": "新增融合植物并提升图形效果。"
+            },
+            "date": "2025-07-10"
+        },
+        {
+            "title": {
+                "en": "New Game Modes Added",
+                "vi": "Thêm chế độ chơi mới",
+                "zh": "新增游戏模式"
+            },
+            "description": {
+                "en": "Introduced Challenge Mode and Night Mode.",
+                "vi": "Giới thiệu Chế độ Thách thức và Chế độ Ban đêm.",
+                "zh": "推出挑战模式和夜间模式。"
+            },
+            "date": "2025-06-15"
+        }
+    ],
+    "social": [
+        {
+            "name": "Twitter",
+            "url": "https://twitter.com/pvzfusione",
+            "icon": "assets/twitter-icon.png"
+        },
+        {
+            "name": "Discord",
+            "url": "https://discord.com/pvzfusione",
+            "icon": "assets/discord-icon.png"
+        }
+    ],
+    "downloads": [
+        {
+            "platform": "Windows",
+            "description": {
+                "en": "Download the latest version for Windows PC.",
+                "vi": "Tải phiên bản mới nhất cho PC Windows.",
+                "zh": "下载Windows PC最新版本。"
+            },
+            "url": "https://drive.google.com/uc?export=download&id=YOUR_WINDOWS_FILE_ID",
+            "discontinued": false
+        },
+        {
+            "platform": "Android",
+            "description": {
+                "en": "Download for Android devices (discontinued).",
+                "vi": "Tải xuống cho thiết bị Android (đã ngừng hỗ trợ).",
+                "zh": "下载Android设备版（已停止支持）。"
+            },
+            "url": "https://drive.google.com/uc?export=download&id=YOUR_ANDROID_FILE_ID",
+            "discontinued": true
+        },
+        {
+            "platform": "iOS",
+            "description": {
+                "en": "Download for iOS devices (discontinued).",
+                "vi": "Tải xuống cho thiết bị iOS (đã ngừng hỗ trợ).",
+                "zh": "下载iOS设备版（已停止支持）。"
+            },
+            "url": "https://drive.google.com/uc?export=download&id=YOUR_IOS_FILE_ID",
+            "discontinued": true
+        }
+    ]
+}
