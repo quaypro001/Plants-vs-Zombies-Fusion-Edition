@@ -7,8 +7,9 @@
             "updates_title": "Latest Updates",
             "social_title": "Follow Us",
             "download_title": "Download",
+            "old_versions_title": "Old Versions",
             "footer_text": "© 2025 PvZ Fusion Edition. All rights reserved.",
-            "discontinued_notice": "This mobile version is no longer supported. Download at your own risk."
+            "discontinued_notice": "This version is no longer supported. Download at your own risk."
         },
         "vi": {
             "hero_title": "Chào mừng đến với PvZ Fusion Edition",
@@ -17,8 +18,9 @@
             "updates_title": "Cập nhật mới nhất",
             "social_title": "Theo dõi chúng tôi",
             "download_title": "Tải xuống",
+            "old_versions_title": "Phiên bản cũ",
             "footer_text": "© 2025 PvZ Fusion Edition. Mọi quyền được bảo lưu.",
-            "discontinued_notice": "Phiên bản di động này không còn được hỗ trợ. Tải xuống có thể gặp rủi ro."
+            "discontinued_notice": "Phiên bản này không còn được hỗ trợ. Tải xuống có thể gặp rủi ro."
         },
         "zh": {
             "hero_title": "欢迎体验PvZ融合版",
@@ -27,8 +29,9 @@
             "updates_title": "最新更新",
             "social_title": "关注我们",
             "download_title": "下载",
+            "old_versions_title": "旧版本",
             "footer_text": "© 2025 PvZ融合版。保留所有权利。",
-            "discontinued_notice": "此移动版本已不再支持。下载需自行承担风险。"
+            "discontinued_notice": "此版本已不再支持。下载需自行承担风险。"
         }
     },
     "updates": [
@@ -100,6 +103,28 @@
                 "zh": "下载iOS设备版（已停止支持）。"
             },
             "url": "https://drive.google.com/uc?export=download&id=YOUR_IOS_FILE_ID",
+            "discontinued": true
+        }
+    ],
+    "old_versions": [
+        {
+            "version": "2.1.5",
+            "description": {
+                "en": "Older version with basic fusion system.",
+                "vi": "Phiên bản cũ với hệ thống kết hợp cơ bản.",
+                "zh": "旧版本，包含基础融合系统。"
+            },
+            "url": "https://drive.google.com/uc?export=download&id=YOUR_OLD_VERSION_2_1_5_ID",
+            "discontinued": true
+        },
+        {
+            "version": "2.1.0",
+            "description": {
+                "en": "Initial release with limited features.",
+                "vi": "Phiên bản đầu tiên với tính năng giới hạn.",
+                "zh": "初始版本，功能有限。"
+            },
+            "url": "https://drive.google.com/uc?export=download&id=YOUR_OLD_VERSION_2_1_0_ID",
             "discontinued": true
         }
     ]
