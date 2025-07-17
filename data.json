@@ -34,25 +34,25 @@
     "updates": [
         {
             "title": {
-                "en": "Version 2.1.6 Released",
+                "en": "Version 2.1.6 Release",
                 "vi": "Phát hành phiên bản 2.1.6",
                 "zh": "版本2.1.6发布"
             },
             "description": {
-                "en": "Added new fusion plants and enhanced graphics.",
-                "vi": "Thêm cây kết hợp mới và nâng cấp đồ họa.",
-                "zh": "新增融合植物并提升图形效果。"
+                "en": "New fusion plants and improved graphics.",
+                "vi": "Cây kết hợp mới và cải tiến đồ họa.",
+                "zh": "新增融合植物和改进的图形。"
             },
             "date": "2025-07-10"
         },
         {
             "title": {
-                "en": "New Game Modes Added",
-                "vi": "Thêm chế độ chơi mới",
-                "zh": "新增游戏模式"
+                "en": "New Game Modes",
+                "vi": "Chế độ chơi mới",
+                "zh": "新游戏模式"
             },
             "description": {
-                "en": "Introduced Challenge Mode and Night Mode.",
+                "en": "Introducing Challenge Mode and Night Mode.",
                 "vi": "Giới thiệu Chế độ Thách thức và Chế độ Ban đêm.",
                 "zh": "推出挑战模式和夜间模式。"
             },
@@ -75,31 +75,31 @@
         {
             "platform": "Windows",
             "description": {
-                "en": "Download the latest version for Windows PC.",
-                "vi": "Tải phiên bản mới nhất cho PC Windows.",
-                "zh": "下载Windows PC最新版本。"
+                "en": "Download for Windows PC.",
+                "vi": "Tải xuống cho PC Windows.",
+                "zh": "Windows PC版下载。"
             },
-            "url": "https://drive.google.com/uc?export=download&id=YOUR_WINDOWS_FILE_ID",
+            "url": "https://drive.google.com/file/d/your-windows-file-id/view?usp=sharing",
             "discontinued": false
         },
         {
             "platform": "Android",
             "description": {
-                "en": "Download for Android devices (discontinued).",
-                "vi": "Tải xuống cho thiết bị Android (đã ngừng hỗ trợ).",
-                "zh": "下载Android设备版（已停止支持）。"
+                "en": "Download for Android devices.",
+                "vi": "Tải xuống cho thiết bị Android.",
+                "zh": "Android设备版下载。"
             },
-            "url": "https://drive.google.com/uc?export=download&id=YOUR_ANDROID_FILE_ID",
+            "url": "https://drive.google.com/file/d/your-android-file-id/view?usp=sharing",
             "discontinued": true
         },
         {
             "platform": "iOS",
             "description": {
-                "en": "Download for iOS devices (discontinued).",
-                "vi": "Tải xuống cho thiết bị iOS (đã ngừng hỗ trợ).",
-                "zh": "下载iOS设备版（已停止支持）。"
+                "en": "Download for iOS devices.",
+                "vi": "Tải xuống cho thiết bị iOS.",
+                "zh": "iOS设备版下载。"
             },
-            "url": "https://drive.google.com/uc?export=download&id=YOUR_IOS_FILE_ID",
+            "url": "https://drive.google.com/file/d/your-ios-file-id/view?usp=sharing",
             "discontinued": true
         }
     ]
