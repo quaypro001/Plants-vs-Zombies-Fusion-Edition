@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plants vs Zombies Fusion Edition</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white font-roboto">
+    <header class="bg-green-600 p-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Plants vs Zombies Fusion Edition</h1>
+        <select id="language-select" class="p-2 bg-gray-800 rounded text-white">
+            <option value="en">English</option>
+            <option value="vi">Tiếng Việt</option>
+            <option value="zh">中文</option>
+        </select>
+    </header>
+
+    <section class="hero bg-cover bg-center h-96 flex items-center justify-center" style="background-image: url('/assets/hero-bg.jpg');">
+        <div class="text-center">
+            <h2 id="hero-title" class="text-4xl font-bold mb-4"></h2>
+            <p id="hero-desc" class="text-lg mb-6"></p>
+            <a id="download-btn" href="#" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Download Now</a>
+        </div>
+    </section>
+
+    <section class="container mx-auto p-6">
+        <h2 id="updates-title" class="text-3xl font-bold mb-4 text-center"></h2>
+        <div id="updates" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </section>
+
+    <section class="container mx-auto p-6 bg-gray-800">
+        <h2 id="social-title" class="text-3xl font-bold mb-4 text-center"></h2>
+        <div id="social-links" class="flex justify-center space-x-4"></div>
+    </section>
+
+    <section class="container mx-auto p-6">
+        <h2 id="download-title" class="text-3xl font-bold mb-4 text-center"></h2>
+        <div id="downloads" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+    </section>
+
+    <footer class="bg-green-600 p-4 text-center">
+        <p id="footer-text"></p>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>
