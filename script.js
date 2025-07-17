@@ -33,10 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!data) {
             heroTitle.textContent = 'Error loading data';
             heroDesc.textContent = 'Please check your connection or contact support.';
-            updatesContainer.innerHTML = '<div class="card"><p>Failed to load updates.</p></div>';
+            updatesContainer.innerHTML = '<div class="update-item"><p>Failed to load updates.</p></div>';
             socialContainer.innerHTML = '<p>Failed to load social links.</p>';
-            downloadsContainer.innerHTML = '<div class="card"><p>Failed to load downloads.</p></div>';
-            oldVersionsContainer.innerHTML = '<div class="card"><p>Failed to load old versions.</p></div>';
+            downloadsContainer.innerHTML = '<div class="download-item"><p>Failed to load downloads.</p></div>';
+            oldVersionsContainer.innerHTML = '<div class="old-version-item"><p>Failed to load old versions.</p></div>';
             return;
         }
 
@@ -56,13 +56,13 @@ document.addEventListener('DOMContentLoaded', () => {
         updatesTitle.textContent = translations[lang]?.updates_title || 'Latest Updates';
         updatesContainer.innerHTML = updates.length > 0
             ? updates.map(update => `
-                <div class="card">
+                <div class="update-item">
                     <h3 class="text-xl font-bold">${update.title[lang] || 'Update Title'}</h3>
                     <p>${update.description[lang] || 'Update description'}</p>
                     <p class="text-sm text-gray-400">${update.date || 'N/A'}</p>
                 </div>
             `).join('')
-            : '<div class="card"><p>No updates available.</p></div>';
+            : '<div class="update-item"><p>No updates available.</p></div>';
 
         // Social
         socialTitle.textContent = translations[lang]?.social_title || 'Follow Us';
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
         downloadsContainer.innerHTML = downloads.length > 0
             ? downloads.map(download => {
                 let content = `
-                    <div class="card">
+                    <div class="download-item">
                         <h3 class="text-xl font-bold">${download.platform}</h3>
                         <p>${download.description[lang] || 'Download description'}</p>
                         <a href="${download.url || '#'}"
@@ -90,22 +90,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 `;
                 if (download.discontinued) {
                     content = `
-                        <div class="card">
+                        <div class="download-item">
                             <div class="discontinued-notice">${translations[lang]?.discontinued_notice || 'Discontinued'}</div>
-                            ${content.slice(25)}
+                            ${content.slice(26)}
                         </div>
                     `;
                 }
                 return content;
             }).join('')
-            : '<div class="card"><p>No downloads available.</p></div>';
+            : '<div class="download-item"><p>No downloads available.</p></div>';
 
         // Old Versions
         oldVersionsTitle.textContent = translations[lang]?.old_versions_title || 'Old Versions';
         oldVersionsContainer.innerHTML = oldVersions.length > 0
             ? oldVersions.map(version => {
                 let content = `
-                    <div class="card">
+                    <div class="old-version-item">
                         <h3 class="text-xl font-bold">${version.version}</h3>
                         <p>${version.description[lang] || 'Old version description'}</p>
                         <a href="${version.url || '#'}"
@@ -116,15 +116,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 `;
                 if (version.discontinued) {
                     content = `
-                        <div class="card">
+                        <div class="old-version-item">
                             <div class="discontinued-notice">${translations[lang]?.discontinued_notice || 'Discontinued'}</div>
-                            ${content.slice(25)}
+                            ${content.slice(27)}
                         </div>
                     `;
                 }
                 return content;
             }).join('')
-            : '<div class="card"><p>No old versions available.</p></div>';
+            : '<div class="old-version-item"><p>No old versions available.</p></div>';
 
         // Footer
         footerText.textContent = translations[lang]?.footer_text || '© 2025 PvZ Fusion Edition. All rights reserved.';
