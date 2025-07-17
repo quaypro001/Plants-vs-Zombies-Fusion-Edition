@@ -66,12 +66,12 @@
         {
             "name": "Twitter",
             "url": "https://twitter.com/pvzfusione",
-            "icon": "assets/twitter-icon.png"
+            "icon": "/assets/twitter-icon.png"
         },
         {
             "name": "Discord",
             "url": "https://discord.com/pvzfusione",
-            "icon": "assets/discord-icon.png"
+            "icon": "/assets/discord-icon.png"
         }
     ],
     "downloads": [
