@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function loadData() {
         try {
-            const response = await fetch('/data.json');
+            const response = await fetch('data.json');
             if (!response.ok) {
                 console.error('Failed to load data.json:', response.status);
                 return null;
