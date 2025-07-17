@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plants vs Zombies Fusion Edition</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body class="bg-gray-900 text-white font-roboto">
-    <!-- Header -->
     <header class="bg-green-600 p-4 flex justify-between items-center">
         <h1 class="text-2xl font-bold">Plants vs Zombies Fusion Edition</h1>
         <select id="language-select" class="p-2 bg-gray-800 rounded text-white">
@@ -19,130 +18,33 @@
         </select>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero bg-cover bg-center h-96 flex items-center justify-center" style="background-image: url('assets/hero-bg.jpg');">
+    <section class="hero bg-cover bg-center h-96 flex items-center justify-center" style="background-image: url('/assets/hero-bg.jpg');">
         <div class="text-center">
-            <h2 Hawkins1
-System: **Download Discontinuation Notification**
-
-To address the request for a notification about the discontinuation of the mobile version in the download section, I’ve updated the provided codebase to include a feature that displays a prominent alert for any discontinued mobile versions (Android and iOS in this case). The implementation uses the existing JSON structure to manage the discontinuation status and supports multilingual notifications. Below, I’ll outline the changes made to achieve this and provide guidance on handling potential issues with persistent notifications, drawing from relevant web resources where applicable.
-
-### Updated Codebase
-
-#### 1. **data.json**
-The `data.json` file has been modified to include:
-- A `discontinued_notice` field in the `translations` section for each language (English, Vietnamese, Chinese) to display the discontinuation message.
-- A `discontinued` boolean field in each download entry to indicate whether a platform (e.g., Android, iOS) is discontinued.
-
-Example snippet of the updated `data.json`:
-```json
-{
-    "translations": {
-        "en": {
-            "discontinued_notice": "This mobile version is no longer supported. Download at your own risk."
-        },
-        "vi": {
-            "discontinued_notice": "Phiên bản di động này không còn được hỗ trợ. Tải xuống có thể gặp rủi ro."
-        },
-        "zh": {
-            "discontinued_notice": "此移动版本已不再支持。下载需自行承担风险。"
-        }
-    },
-    "downloads": [
-        {
-            "platform": "Windows",
-            "discontinued": false
-        },
-        {
-            "platform": "Android",
-            "discontinued": true
-        },
-        {
-            "platform": "iOS",
-            "discontinued": true
-        }
-    ]
-}
-```
-
-#### 2. **index.html**
-A new `<div>` element is added to the Download Section to display the discontinuation notice conditionally. The notice is styled as a prominent alert banner using Tailwind CSS for a modern look.
-
-```html
-<section class="container mx-auto p-6">
-    <h2 id="download-title" class="text-3xl font-bold mb-4 text-center">Download</h2>
-    <div id="downloads" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
-</section>
-```
-
-#### 3. **styles.css**
-Additional styles are added to create a visually distinct notification banner for discontinued versions, ensuring it stands out while maintaining the modern aesthetic.
-
-```css
-.discontinued-notice {
-    background-color: #f87171; /* Red background for warning */
-    color: white;
-    padding: 12px;
-    border-radius: 8px;
-    margin-bottom: 16px;
-    text-align: center;
-    font-weight: bold;
-}
-```
-
-#### 4. **script.js**
-The JavaScript code is updated to check the `discontinued` field for each download entry. If `discontinued: true`, a notification banner is prepended to the download card.
-
-```javascript
-// Inside the updateContent function, modify the downloads rendering:
-downloads.forEach(download => {
-    downloadsContainer.innerHTML += `
-        <div class="card">
-            ${download.discontinued ? `<div class="discontinued-notice">${translations[lang].discontinued_notice}</div>` : ''}
-            <h3 class="text-xl font-bold">${download.platform}</h3>
-            <p>${download.description[lang]}</p>
-            <a href="${download.url}" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4 inline-block">${translations[lang].download_btn}</a>
+            <h2 id="hero-title" class="text-4xl font-bold mb-4">Welcome to PvZ Fusion Edition</h2>
+            <p id="hero-desc" class="text-lg mb-6">A fan-made game with unique plant fusion system!</p>
+            <a id="download-btn" href="#" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Download Now</a>
         </div>
-    `;
-});
-```
+    </section>
 
-### Handling Persistent Notifications
-Based on web resources, some Android devices may experience issues where download-related notifications persist in the system notification panel, which could be problematic if the discontinuation notice is mistaken for a system notification or triggers unwanted behavior. To mitigate this:
+    <section class="container mx-auto p-6">
+        <h2 id="updates-title" class="text-3xl font-bold mb-4 text-center">Latest Updates</h2>
+        <div id="updates" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </section>
 
-- **Clear Download Manager Cache**: If a notification persists (e.g., "Download Complete" appearing repeatedly), users can clear the Download Manager’s cache and data:
-  - Go to **Settings > Apps & Notifications > See all apps > Show system apps**.
-  - Find **Download Manager**, then select **Clear Storage** and **Clear Cache**.[](https://android.stackexchange.com/questions/207979/disabling-download-manager-notifications)[](https://forums.androidcentral.com/threads/same-three-download-complete-notifications-keep-displaying-after-4-4-update.340272/)
-  - Note: This clears download history, which may be acceptable for a clean slate.
+    <section class="container mx-auto p-6 bg-gray-800">
+        <h2 id="social-title" class="text-3xl font-bold mb-4 text-center">Follow Us</h2>
+        <div id="social-links" class="flex justify-center space-x-4"></div>
+    </section>
 
-- **Disable Download Manager Notifications**: To prevent system-level notifications from interfering with the web-based discontinuation notice:
-  - Navigate to **Settings > Apps & Notifications > See all apps > Show system apps > Download Manager > Notifications**.
-  - Set notification priority to the lowest level or disable specific categories (e.g., "Download Complete").[](https://android.stackexchange.com/questions/207979/disabling-download-manager-notifications)
-  - Alternatively, for Android 8.0+, adjust notification channels to minimize disturbances without disabling the app entirely.[](https://android.stackexchange.com/questions/207979/disabling-download-manager-notifications)
+    <section class="container mx-auto p-6">
+        <h2 id="download-title" class="text-3xl font-bold mb-4 text-center">Download</h2>
+        <div id="downloads" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+    </section>
 
-- **Web-Based Notification Control**: The discontinuation notice in this implementation is purely web-based (rendered in the browser via HTML/CSS), so it won’t trigger system notifications. However, if the download link itself initiates a system download (e.g., via the browser’s Download Manager), ensure the `DownloadManager.Request` in any related Android app integration uses `VISIBILITY_VISIBLE_NOTIFY_COMPLETED` to show a notification only upon completion, which can be dismissed.[](https://stackoverflow.com/questions/11128263/notification-disappears-android-downloadmanager)[](https://stackoverflow.com/questions/69000504/how-to-have-notification-when-download-complete)
+    <footer class="bg-green-600 p-4 text-center">
+        <p id="footer-text">© 2025 PvZ Fusion Edition. All rights reserved.</p>
+    </footer>
 
-### Implementation Notes
-- **Responsive Design**: The notification uses Tailwind CSS classes (`bg-red-400`, `rounded`, etc.) to ensure it’s visually distinct and responsive across devices.
-- **Multilingual Support**: The notice dynamically updates based on the selected language, ensuring consistency with the site’s multilingual setup.
-- **GitHub Pages Compatibility**: The code remains fully compatible with GitHub Pages, as it uses static assets and client-side JavaScript.
-
-### Potential Issues and Solutions
-- **Notification Persisting After Download**: If users report persistent system notifications after clicking the download link, guide them to clear the Download Manager cache as described above.[](https://forums.androidcentral.com/threads/same-three-download-complete-notifications-keep-displaying-after-4-4-update.340272/)
-- **Browser Compatibility**: Ensure the browser used (e.g., Chrome, Firefox) doesn’t suppress the web-based notification. For example, Firefox for Android has known issues with stuck notifications for large downloads, which can be resolved by force-stopping the browser or toggling notification settings.[](https://bugzilla.mozilla.org/show_bug.cgi?id=1489673)
-- **User Experience**: The red banner is designed to be non-intrusive yet noticeable. If users find it disruptive, consider adding a dismissible option (e.g., a close button) using JavaScript to hide the notice for the session.
-
-### Deployment Instructions
-1. Update the repository with the modified files (`index.html`, `styles.css`, `script.js`, `data.json`).
-2. Ensure the `assets/` folder includes necessary images (e.g., `hero-bg.jpg`, social media icons).
-3. Push changes to the `main` branch of your GitHub repository.
-4. Verify the GitHub Pages settings (Settings > Pages > Source: `main` branch, `/ (root)` folder).
-5. Test the site at the provided URL (e.g., `https://username.github.io/pvz-fusion`) to confirm the discontinuation notice appears for Android and iOS downloads.
-
-### Additional Notes
-- **Assets**: Replace placeholder image paths (e.g., `assets/hero-bg.jpg`) with actual files.
-- **Download Links**: Update the `url` fields in `data.json` with valid download links.
-- **Legal Considerations**: Ensure compliance with any licensing requirements for Plants vs Zombies-related content, as this is a fan-made project.
-- **Enhancements**: Optionally add animations (e.g., fade-in for the notice) or a dismissible button using JavaScript for improved user experience.
-
-If you encounter issues or need further customization (e.g., styling the notice differently, adding a close button, or integrating with a server-side notification system), let me know, and I can provide additional code or guidance![](https://www.tenorshare.com/android/how-to-remove-software-update-notification-from-android.html)[](https://bugzilla.mozilla.org/show_bug.cgi?id=1489673)
+    <script src="/script.js"></script>
+</body>
+</html>
