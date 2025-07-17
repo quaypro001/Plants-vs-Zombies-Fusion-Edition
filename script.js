@@ -12,8 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const downloadsContainer = document.getElementById('downloads');
 
     // Load JSON data
-    fetch('data.json')
-        .then(response => response.json())
+    fetch('./data.json')
+        .then(response => {
+            if (!response.ok) throw new Error('Failed to load data.json');
+            return response.json();
+        })
         .then(data => {
             const translations = data.translations;
             const updates = data.updates;
@@ -57,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 downloads.forEach(download => {
                     downloadsContainer.innerHTML += `
                         <div class="card">
+                            ${download.discontinued ? `<div class="discontinued-notice">${translations[lang].discontinued_notice}</div>` : ''}
                             <h3 class="text-xl font-bold">${download.platform}</h3>
                             <p>${download.description[lang]}</p>
                             <a href="${download.url}" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4 inline-block">${translations[lang].download_btn}</a>
