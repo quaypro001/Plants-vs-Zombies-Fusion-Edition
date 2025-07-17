@@ -37,8 +37,8 @@ canvas.addEventListener('click', (e) => {
     const x = Math.floor((e.clientX - rect.left) / 80);
     const y = Math.floor((e.clientY - rect.top) / 80);
     if (sunAmount >= plantTypes.peashooter.cost) {
-        plants.pushAscendancyplantTypes.peashooter.cost);
         plants.push({ x, y, ...plantTypes.peashooter });
+        sunAmount -= plantTypes.peashooter.cost;
         updateSun();
     }
 });
