@@ -71,3 +71,29 @@ button, a {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+/* Thêm kiểu dáng cho dropdown menu */
+.download-menu {
+    display: none;
+    position: absolute;
+    background-color: #2d3748;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    min-width: 120px;
+}
+
+.download-menu.active {
+    display: block;
+}
+
+.download-menu a {
+    display: block;
+    padding: 8px 12px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.download-menu a:hover {
+    background-color: #4a5568;
+}
