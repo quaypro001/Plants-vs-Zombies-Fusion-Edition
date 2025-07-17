@@ -79,7 +79,7 @@
                 "vi": "Tải xuống cho PC Windows.",
                 "zh": "Windows PC版下载。"
             },
-            "url": "https://drive.google.com/file/d/your-windows-file-id/view?usp=sharing",
+            "url": "https://example.com/pvz-fusion-windows",
             "discontinued": false
         },
         {
@@ -89,7 +89,7 @@
                 "vi": "Tải xuống cho thiết bị Android.",
                 "zh": "Android设备版下载。"
             },
-            "url": "https://drive.google.com/file/d/your-android-file-id/view?usp=sharing",
+            "url": "https://example.com/pvz-fusion-android",
             "discontinued": true
         },
         {
@@ -99,7 +99,7 @@
                 "vi": "Tải xuống cho thiết bị iOS.",
                 "zh": "iOS设备版下载。"
             },
-            "url": "https://drive.google.com/file/d/your-ios-file-id/view?usp=sharing",
+            "url": "https://example.com/pvz-fusion-ios",
             "discontinued": true
         }
     ]
