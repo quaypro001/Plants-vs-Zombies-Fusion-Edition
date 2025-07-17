@@ -1,0 +1,81 @@
+{
+    "translations": {
+        "en": {
+            "title": "Plants vs Zombies Fusion Edition",
+            "description": "A modern tower defense game with hybrid plants and challenging zombies!",
+            "updates": "Updates",
+            "social": "Social Media",
+            "download": "Download"
+        },
+        "vi": {
+            "title": "Plants vs Zombies Phiên Bản Fusion",
+            "description": "Trò chơi phòng thủ tháp hiện đại với các loại cây lai và zombie đầy thách thức!",
+            "updates": "Cập nhật",
+            "social": "Mạng Xã Hội",
+            "download": "Tải Xuống"
+        },
+        "zh": {
+            "title": "植物大战僵尸融合版",
+            "description": "一款现代塔防游戏，拥有混合植物和具有挑战性的僵尸！",
+            "updates": "更新",
+            "social": "社交媒体",
+            "download": "下载"
+        }
+    },
+    "updates": {
+        "en": [
+            "Version 2.7: Added new hybrid plants and fixed bugs.",
+            "Version 2.6: Introduced new game modes and enhanced graphics."
+        ],
+        "vi": [
+            "Phiên bản 2.7: Thêm cây lai mới và sửa lỗi.",
+            "Phiên bản 2.6: Giới thiệu chế độ chơi mới và cải tiến đồ họa."
+        ],
+        "zh": [
+            "版本2.7：添加了新的混合植物并修复了错误。",
+            "版本2.6：引入了新的游戏模式并增强了图形。"
+        ]
+    },
+    "social": [
+        {
+            "name": "Facebook",
+            "link": "https://facebook.com/pvzfusione"
+        },
+        {
+            "name": "Twitter",
+            "link": "https://twitter.com/pvzfusione"
+        }
+    ],
+    "download": {
+        "en": [
+            {
+                "text": "Download for Android",
+                "url": "https://pvzfusion.pro/android"
+            },
+            {
+                "text": "Download for PC",
+                "url": "https://pvzfusion.pro/pc"
+            }
+        ],
+        "vi": [
+            {
+                "text": "Tải xuống cho Android",
+                "url": "https://pvzfusion.pro/android"
+            },
+            {
+                "text": "Tải xuống cho PC",
+                "url": "https://pvzfusion.pro/pc"
+            }
+        ],
+        "zh": [
+            {
+                "text": "安卓下载",
+                "url": "https://pvzfusion.pro/android"
+            },
+            {
+                "text": "PC下载",
+                "url": "https://pvzfusion.pro/pc"
+            }
+        ]
+    }
+}

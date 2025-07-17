@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 20px;
+    text-align: center;
+}
+
+.language-selector {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.language-selector select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    background: #fff;
+    color: #333;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.game-container {
+    position: relative;
+    margin: 0 auto;
+    background: #2c3e50;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+#gameCanvas {
+    background: url('https://via.placeholder.com/800x600?text=Game+Background') no-repeat center;
+    background-size: cover;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
+#sun-counter {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.5rem;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.info-section {
+    margin: 40px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.info-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.info-section div {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
