@@ -32,8 +32,8 @@ button, a {
     font-weight: 500;
 }
 
-/* Thay thế kiểu dáng của card bằng Tailwind trực tiếp */
-.update-item, .download-item, .old-version-item {
+/* Định nghĩa kiểu dáng cho các phần tử */
+.update-item {
     background-color: #2d3748;
     border-radius: 8px;
     padding: 16px;
@@ -41,7 +41,33 @@ button, a {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.update-item:hover, .download-item:hover, .old-version-item:hover {
+.update-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.download-item {
+    background-color: #2d3748;
+    border-radius: 8px;
+    padding: 16px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.download-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.old-version-item {
+    background-color: #2d3748;
+    border-radius: 8px;
+    padding: 16px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.old-version-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
