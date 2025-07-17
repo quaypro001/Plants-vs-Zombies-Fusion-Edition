@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         heroDesc.textContent = translations[lang]?.hero_desc || 'A fan-made game!';
         const windowsDownload = downloads.find(d => d.platform === 'Windows' && !d.discontinued);
         downloadBtn.href = windowsDownload ? windowsDownload.url : '#';
+        downloadBtn.textContent = translations[lang]?.download_btn || 'Download Now';
 
         // Updates
         updatesTitle.textContent = translations[lang]?.updates_title || 'Latest Updates';
@@ -82,17 +83,23 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="download-item">
                         <h3 class="text-xl font-bold">${download.platform}</h3>
                         <p>${download.description[lang] || 'Download description'}</p>
-                        <a href="${download.url || '#'}"
-                           class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4 inline-block">
-                            ${translations[lang]?.download_btn || 'Download'}
-                        </a>
+                        <div class="relative">
+                            <button id="download-btn-${download.platform}" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4 inline-block">
+                                ${translations[lang]?.download_btn || 'Download'}
+                            </button>
+                            <div class="download-menu" id="menu-${download.platform}">
+                                <a href="${download.url || '#'}?lang=en" class="en">Download Now</a>
+                                <a href="${download.url || '#'}?lang=vi" class="vi">Tải xuống ngay</a>
+                                <a href="${download.url || '#'}?lang=zh" class="zh">立即下载</a>
+                            </div>
+                        </div>
                     </div>
                 `;
                 if (download.discontinued) {
                     content = `
                         <div class="download-item">
                             <div class="discontinued-notice">${translations[lang]?.discontinued_notice || 'Discontinued'}</div>
-                            ${content.slice(26)}
+                            ${content.slice(27)}
                         </div>
                     `;
                 }
@@ -108,10 +115,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="old-version-item">
                         <h3 class="text-xl font-bold">${version.version}</h3>
                         <p>${version.description[lang] || 'Old version description'}</p>
-                        <a href="${version.url || '#'}"
-                           class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded mt-4 inline-block">
-                            ${translations[lang]?.download_btn || 'Download'}
-                        </a>
+                        <div class="relative">
+                            <button id="download-btn-${version.version}" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded mt-4 inline-block">
+                                ${translations[lang]?.download_btn || 'Download'}
+                            </button>
+                            <div class="download-menu" id="menu-${version.version}">
+                                <a href="${version.url || '#'}?lang=en" class="en">Download Now</a>
+                                <a href="${version.url || '#'}?lang=vi" class="vi">Tải xuống ngay</a>
+                                <a href="${version.url || '#'}?lang=zh" class="zh">立即下载</a>
+                            </div>
+                        </div>
                     </div>
                 `;
                 if (version.discontinued) {
@@ -128,6 +141,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Footer
         footerText.textContent = translations[lang]?.footer_text || '© 2025 PvZ Fusion Edition. All rights reserved.';
+
+        // Thêm event listener cho các nút download
+        [...document.querySelectorAll('[id^="download-btn-"]')].forEach(btn => {
+            const menuId = `menu-${btn.id.split('-')[1]}`;
+            const menu = document.getElementById(menuId);
+            if (btn && menu) {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    menu.classList.toggle('active');
+                });
+                menu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const lang = link.className;
+                        const url = link.getAttribute('href').split('?')[0];
+                        window.location.href = `${url}?lang=${lang}`;
+                        menu.classList.remove('active');
+                    });
+                });
+            }
+        });
     }
 
     loadData().then(data => {
