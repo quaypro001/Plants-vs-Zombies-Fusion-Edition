@@ -3,7 +3,7 @@
         "en": {
             "hero_title": "Welcome to PvZ Fusion Edition",
             "hero_desc": "A fan-made game with unique plant fusion system!",
-            "download_btn": "Download Now",
+            "download_btn": "Download",
             "updates_title": "Latest Updates",
             "social_title": "Follow Us",
             "download_title": "Download",
@@ -14,7 +14,7 @@
         "vi": {
             "hero_title": "Chào mừng đến với PvZ Fusion Edition",
             "hero_desc": "Game do fan tạo với hệ thống kết hợp cây độc đáo!",
-            "download_btn": "Tải xuống ngay",
+            "download_btn": "Tải xuống",
             "updates_title": "Cập nhật mới nhất",
             "social_title": "Theo dõi chúng tôi",
             "download_title": "Tải xuống",
@@ -25,7 +25,7 @@
         "zh": {
             "hero_title": "欢迎体验PvZ融合版",
             "hero_desc": "粉丝自制的游戏，拥有独特的植物融合系统！",
-            "download_btn": "立即下载",
+            "download_btn": "下载",
             "updates_title": "最新更新",
             "social_title": "关注我们",
             "download_title": "下载",
