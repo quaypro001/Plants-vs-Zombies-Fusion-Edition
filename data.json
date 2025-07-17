@@ -34,9 +34,9 @@
     "updates": [
         {
             "title": {
-                "en": "Version 2.7 Release",
-                "vi": "Phát hành phiên bản 2.7",
-                "zh": "版本2.7发布"
+                "en": "Version 2.1.6 Release",
+                "vi": "Phát hành phiên bản 2.1.6",
+                "zh": "版本2.1.6发布"
             },
             "description": {
                 "en": "New fusion plants and improved graphics.",
@@ -67,7 +67,7 @@
         },
         {
             "name": "Discord",
-            "url": "https://discord.gg/pvzfusion",
+            "url": "https://discord.com/pvzfusione",
             "icon": "assets/discord-icon.png"
         }
     ],
@@ -79,8 +79,8 @@
                 "vi": "Tải xuống cho PC Windows.",
                 "zh": "Windows PC版下载。"
             },
-            "url": "https://example.com/pvz-fusion-windows",
-            "discontinued": true
+            "url": "https://drive.google.com/file/d/your-windows-file-id/view?usp=sharing",
+            "discontinued": false
         },
         {
             "platform": "Android",
@@ -89,7 +89,7 @@
                 "vi": "Tải xuống cho thiết bị Android.",
                 "zh": "Android设备版下载。"
             },
-            "url": "https://example.com/pvz-fusion-android",
+            "url": "https://drive.google.com/file/d/your-android-file-id/view?usp=sharing",
             "discontinued": true
         },
         {
@@ -99,7 +99,7 @@
                 "vi": "Tải xuống cho thiết bị iOS.",
                 "zh": "iOS设备版下载。"
             },
-            "url": "https://example.com/pvz-fusion-ios",
+            "url": "https://drive.google.com/file/d/your-ios-file-id/view?usp=sharing",
             "discontinued": true
         }
     ]
