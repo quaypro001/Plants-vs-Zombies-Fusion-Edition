@@ -62,8 +62,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 element.textContent = translations[lang][key];
             }
         });
-        // Cập nhật lại nội dung các phần động nếu cần (ví dụ: các nút download có thể có văn bản riêng)
-        // Hiện tại chỉ cần dịch các phần tĩnh
+        // **Quan trọng:** Cần dịch các nội dung động đã được thêm vào DOM
+        // Kiểm tra và dịch nội dung trong các thẻ card nếu có
+        document.querySelectorAll('.card [data-translate]').forEach(element => {
+            const key = element.dataset.translate;
+            if (translations[lang] && translations[lang][key]) {
+                element.textContent = translations[lang][key];
+            }
+        });
     }
 
     // Gán sự kiện cho các nút chuyển đổi ngôn ngữ
@@ -73,9 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Gọi hàm setLanguage khi tải trang để áp dụng ngôn ngữ mặc định
-    setLanguage(currentLang);
-
     // --- Xử lý tải dữ liệu từ JSON ---
 
     // Tải và hiển thị Updates
@@ -83,6 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => {
             const updatesList = document.getElementById('updates-list');
+            updatesList.innerHTML = ''; // Xóa nội dung cũ trước khi thêm
             data.forEach(update => {
                 const updateCard = `
                     <div class="card">
@@ -104,6 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => {
             const socialLinks = document.getElementById('social-links');
+            socialLinks.innerHTML = ''; // Xóa nội dung cũ trước khi thêm
             data.forEach(social => {
                 const socialCard = `
                     <div class="card">
@@ -126,6 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => {
             const downloadOptions = document.getElementById('download-options');
+            downloadOptions.innerHTML = ''; // Xóa nội dung cũ trước khi thêm
             data.forEach(download => {
                 const downloadCard = `
                     <div class="card">
@@ -141,6 +147,11 @@ document.addEventListener('DOMContentLoaded', () => {
             setLanguage(currentLang);
         })
         .catch(error => console.error('Error loading downloads:', error));
+
+    // Gọi hàm setLanguage khi tải trang để áp dụng ngôn ngữ mặc định cho cả nội dung tĩnh và động
+    // Đảm bảo hàm này được gọi sau khi tất cả nội dung đã được load hoặc nằm trong các `.then` của fetch
+    // Để đơn giản, ta sẽ gọi nó sau khi tất cả các fetch hoàn tất hoặc đảm bảo các thẻ có data-translate đã tồn tại
+    // Cách tốt nhất là gọi nó trong mỗi `fetch().then()` như đã sửa ở trên.
 
     // --- Hiệu ứng Scroll Animation ---
     const sections = document.querySelectorAll('.section');
