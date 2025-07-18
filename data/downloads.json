@@ -1,0 +1,23 @@
+[
+    {
+        "platform": "Windows",
+        "translateKey": "windows-download",
+        "url": "https://yourgamecdn.com/pvz-fusion-windows.exe",
+        "icon": "assets/images/download/windows.png",
+        "description": "Phiên bản dành cho máy tính Windows."
+    },
+    {
+        "platform": "Android",
+        "translateKey": "android-download",
+        "url": "https://yourgamecdn.com/pvz-fusion-android.apk",
+        "icon": "assets/images/download/android.png",
+        "description": "Phiên bản di động cho thiết bị Android."
+    },
+    {
+        "platform": "Mac",
+        "translateKey": "mac-download",
+        "url": "https://yourgamecdn.com/pvz-fusion-mac.dmg",
+        "icon": "assets/images/download/mac.png",
+        "description": "Phiên bản dành cho máy tính MacOS."
+    }
+]
