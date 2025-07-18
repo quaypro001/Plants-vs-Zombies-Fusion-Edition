@@ -1,0 +1,336 @@
+/* General Body Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #4CAF50, #8BC34A); /* Gradient nền */
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header - Hero Section */
+.hero {
+    background: url('../assets/images/hero-bg.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4); /* Overlay tối */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    right: -50px;
+    bottom: -50px;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+    animation: pulse 10s infinite alternate;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.1; }
+    100% { transform: scale(1.1); opacity: 0.2; }
+}
+
+
+.hero-logo {
+    max-width: 250px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
+}
+
+.hero h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    text-shadow: 4px 4px #000;
+    letter-spacing: 2px;
+}
+
+.hero .tagline {
+    font-size: 1.3em;
+    font-weight: 700;
+    text-shadow: 2px 2px #000;
+}
+
+/* Language Switcher */
+.language-switcher {
+    margin-top: 30px;
+}
+
+.language-switcher button {
+    background-color: #FFD700;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.language-switcher button:hover {
+    background-color: #FFA500;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.3);
+}
+
+/* Navbar */
+.navbar {
+    background-color: #2E8B57; /* Sea Green */
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 25px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 8px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background-color: #FFD700; /* Gold */
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar ul li a:hover {
+    color: #FFD700;
+}
+
+.navbar ul li a:hover::after,
+.navbar ul li a.active::after {
+    width: 100%;
+}
+
+/* Sections */
+.section {
+    background-color: white;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 0.6s ease-out;
+}
+
+/* Animation cho section khi scroll vào view */
+.section.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+
+.section h2 {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    color: #2E8B57;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px #D3D3D3;
+}
+
+.section-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 30px auto;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Grid Container for Updates, Social, Downloads */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* Card Styles */
+.card {
+    background-color: #F8F8F8;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+    color: #4CAF50;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #555;
+    font-size: 1.1em;
+}
+
+.card .date {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.card a.button {
+    display: inline-block;
+    background-color: #2E8B57;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card a.button:hover {
+    background-color: #3CB371;
+    transform: scale(1.05);
+}
+
+/* Social Links */
+.social-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Download Buttons */
+.download-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 15px;
+}
+
+.download-link {
+    display: block;
+    background-color: #FFD700;
+    color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.download-link:hover {
+    background-color: #FFA500;
+    transform: translateY(-3px);
+}
+
+/* Footer */
+.footer {
+    background-color: #2E8B57;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 50px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero .tagline {
+        font-size: 1.1em;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .section h2 {
+        font-size: 2em;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero h1 {
+        font-size: 1.8em;
+    }
+
+    .language-switcher button {
+        padding: 8px 15px;
+        margin: 0 3px;
+        font-size: 0.9em;
+    }
+
+    .section {
+        margin: 20px auto;
+        padding: 25px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}
