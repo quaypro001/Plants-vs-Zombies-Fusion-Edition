@@ -1,0 +1,20 @@
+[
+    {
+        "date": "15/07/2025",
+        "title": "Bản cập nhật v1.2.0: Cây và Zombie mới!",
+        "description": "Thêm cây 'Hồng Độc' với khả năng gây sát thương diện rộng và zombie 'Thợ Mỏ' có thể đào đường hầm.",
+        "link": "https://yourgameblog.com/update-1-2-0"
+    },
+    {
+        "date": "01/07/2025",
+        "title": "Sự kiện Hè Rực Lửa",
+        "description": "Tham gia sự kiện đặc biệt mùa hè để nhận các phần thưởng độc quyền và trang phục mới.",
+        "link": "https://yourgameblog.com/summer-event"
+    },
+    {
+        "date": "10/06/2025",
+        "title": "Bản vá lỗi nhỏ v1.1.1",
+        "description": "Sửa các lỗi nhỏ về cân bằng game và tối ưu hóa hiệu suất.",
+        "link": null
+    }
+]
