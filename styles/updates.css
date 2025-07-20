@@ -1,0 +1,11 @@
+body {
+    background-image: url('https://via.placeholder.com/1920x1080?text=Background');
+    background-size: cover;
+    background-attachment: fixed;
+}
+.update-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
