@@ -1,0 +1,26 @@
+[
+    {
+        "version": "2.7.1",
+        "platform": "PC",
+        "description": "Phiên bản mới nhất với đồ họa cải tiến và chế độ phiêu lưu vùng tuyết.",
+        "link": "https://example.com/download/pvz-fusion-2.7.1-pc.zip"
+    },
+    {
+        "version": "2.7.1",
+        "platform": "Android",
+        "description": "Phiên bản mới nhất cho Android, tương thích với hầu hết thiết bị.",
+        "link": "https://example.com/download/pvz-fusion-2.7.1.apk"
+    },
+    {
+        "version": "2.7.0",
+        "platform": "PC",
+        "description": "Phiên bản ổn định với cơ chế cây kết hợp.",
+        "link": "https://example.com/download/pvz-fusion-2.7.0-pc.zip"
+    },
+    {
+        "version": "2.7.0",
+        "platform": "Android",
+        "description": "Phiên bản ổn định cho Android, nhẹ và mượt mà.",
+        "link": "https://example.com/download/pvz-fusion-2.7.0.apk"
+    }
+]
